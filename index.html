@@ -15,6 +15,10 @@
 
         <tabela v-bind:titulos="['Nome','E-mail', 'Link']" v-bind:registros="registros"></tabela>
 
+        <p v-once>{{meutitulo}}</p>
+
+        <p v-html="html"></p>
+
     </div>
 
     <script type="text/javascript">
@@ -44,7 +48,8 @@
                 meutitulo: 'Esse é o titulo',
                 registros: [{ titulo: 'Título 1', descricao: 'descricao 1', link: 'link1' },
                 { titulo: 'Título 2', descricao: 'descricao 2', link: 'link2' },
-                { titulo: 'Título 3', descricao: 'descricao 3', link: 'link3' }]
+                { titulo: 'Título 3', descricao: 'descricao 3', link: 'link3' }],
+                html: '<a href="#">esse é um link</a>'
             }
         });
 
