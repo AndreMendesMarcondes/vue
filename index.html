@@ -21,6 +21,16 @@
 
         <p>{{ 23.98849848 | TrataValor }} </p>
 
+        <ul>
+            <li v-for="registro in registros">
+                {{registro.titulo}} - {{registro.descricao}} - {{registro.link}} - {{registro.valor | TrataValor}}
+            </li>
+        </ul>
+        <p>Total (methods): {{totalValorMetodo() | TrataValor}}</p>
+        <p>Total (computed): {{totalValorComputado | TrataValor}}</p>
+
+        <p>contaMethods: {{contaMethods}}</p>
+        <p>contaComputed: {{contaComputed}}</p>
     </div>
 
     <script type="text/javascript">
@@ -48,16 +58,38 @@
             el: "#app",
             data: {
                 meutitulo: 'Esse é o titulo',
-                registros: [{ titulo: 'Título 1', descricao: 'descricao 1', link: 'link1' },
-                { titulo: 'Título 2', descricao: 'descricao 2', link: 'link2' },
-                { titulo: 'Título 3', descricao: 'descricao 3', link: 'link3' }],
-                html: '<a href="#">esse é um link</a>'
+                registros: [{ titulo: 'Título 1', descricao: 'descricao 1', link: 'link1', valor: 23.456465456 },
+                { titulo: 'Título 2', descricao: 'descricao 2', link: 'link2', valor: 10.436465456 },
+                { titulo: 'Título 3', descricao: 'descricao 3', link: 'link3', valor: 23 }],
+                html: '<a href="#">esse é um link</a>',
+                contaMethods: 0,
+                contaComputed: 0,
             },
             filters: {
                 TrataValor: function (valor) {
                     return ('R$' + (valor).toFixed(2)).replace('.', ',');
                 }
-            }
+            },
+            methods: {
+                totalValorMetodo: function () {
+                    this.contaMethods++;
+                    var total = 0;
+                    for (item of this.registros) {
+                        total += item.valor;
+                    }
+                    return total;
+                }
+            },
+            computed: {
+                totalValorComputado: function () {
+                    this.contaComputed++;
+                    var total = 0;
+                    for (item of this.registros) {
+                        total += item.valor;
+                    }
+                    return total;
+                }
+            },
         });
 
     </script>
