@@ -19,6 +19,8 @@
 
         <p v-html="html"></p>
 
+        <p>{{ 23.98849848 | TrataValor }} </p>
+
     </div>
 
     <script type="text/javascript">
@@ -50,6 +52,11 @@
                 { titulo: 'Título 2', descricao: 'descricao 2', link: 'link2' },
                 { titulo: 'Título 3', descricao: 'descricao 3', link: 'link3' }],
                 html: '<a href="#">esse é um link</a>'
+            },
+            filters: {
+                TrataValor: function (valor) {
+                    return ('R$' + (valor).toFixed(2)).replace('.', ',');
+                }
             }
         });
 
