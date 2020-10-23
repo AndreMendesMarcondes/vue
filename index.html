@@ -36,6 +36,14 @@
             <label for="receberEmail">Receber Ligação</label>
         </p>
 
+        <p>Radio: {{sexo}}</p>
+        <p>
+            <input type="radio" id="masculino" value="M" v-model="sexo" />
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="feminino" value="F" v-model="sexo" />
+            <label for="feminino">Feminino</label>
+        </p>
+
     </div>
 
     <script type="text/javascript">
@@ -51,7 +59,8 @@
                 texto: '',
                 textarea: '',
                 termos: false,
-                notificacoes: []
+                notificacoes: [],
+                sexo: 'F'
             }
         });
 
