@@ -44,6 +44,26 @@
             <label for="feminino">Feminino</label>
         </p>
 
+        <p>Select {{ano}}</p>
+        <p>
+            <select v-model="ano">
+                <option disabled value="">Escolha o ano</option>
+                <option value="2017">Ano 2017</option>
+                <option value="2018">Ano 2018</option>
+                <option value="2019">Ano 2019</option>
+            </select>
+        </p>
+
+        <p>Multi Select {{cores}}</p>
+        <p>
+            <select multiple v-model="cores">
+                <option disabled value="">Escolha as cores</option>
+                <option value="Azul">Azul</option>
+                <option value="Verde">Verde</option>
+                <option value="Vermelho">Vermelho</option>
+            </select>
+        </p>
+
     </div>
 
     <script type="text/javascript">
@@ -60,7 +80,9 @@
                 textarea: '',
                 termos: false,
                 notificacoes: [],
-                sexo: 'F'
+                sexo: 'F',
+                ano: 2018,
+                cores: []
             }
         });
 
