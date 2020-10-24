@@ -1,7 +1,7 @@
 <template>
 <div id="app" class="contain">
     <div class="slider">
-        <h3>Ação</h3>
+        <teste titulo="Categoria"></teste>
         <span v-on:mouseover="scrollDireita()" v-on:mouseout="clearScroll()" class="handle handlePrev active">
             <i class="fa fa-caret-left" aria-hidden="true"></i>
         </span>
@@ -117,8 +117,13 @@
 </template>
 
 <script>
+import teste from "./componentes/teste.vue";
+
 export default {
     name: "app",
+    components: {
+        teste,
+    },
     data() {
         return {
             nomeProjeto: "Netflix com Vue",
