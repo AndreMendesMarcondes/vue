@@ -1,128 +1,18 @@
 <template>
 <div id="app" class="contain">
-    <div class="slider">
-        <teste titulo="Categoria"></teste>
-        <span v-on:mouseover="scrollDireita()" v-on:mouseout="clearScroll()" class="handle handlePrev active">
-            <i class="fa fa-caret-left" aria-hidden="true"></i>
-        </span>
-
-        <div id="scroller" class="row">
-            <div class="row__inner">
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-
-                <div class="gui-card">
-                    <div class="gui-card__media">
-                        <img class="gui-card__img" src="https://img1.ibxk.com.br/2015/11/12/12134915138723.jpg?w=700" alt="" />
-                    </div>
-                    <div class="gui-card__details">
-                        <div class="gui-card__title">Assassin’s Creed</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <span v-on:mouseover="scrollEsquerda()" v-on:mouseout="clearScroll()" class="handle handleNext active">
-            <i class="fa fa-caret-right" aria-hidden="true"></i>
-        </span>
-    </div>
+    <categoria titulo="Comédia"></categoria>
+    <categoria titulo="Suspense"></categoria>
 </div>
 </template>
 
 <script>
-import teste from "./componentes/teste.vue";
+//import teste from "./componentes/teste.vue";
+import Categoria from "./componentes/Categoria.vue";
 
 export default {
     name: "app",
     components: {
-        teste,
+        Categoria,
     },
     data() {
         return {
